@@ -8,7 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const BlogPostPage = ({data}) => {
   const post = data.mdx
   const imageData = getImage(post.frontmatter.image)
-  const seoImage = imageData.images.sources[0].srcSet.split(",")[0].split(" ")[0]
+  const seoImage = imageData.images.fallback.src
   return (
     <Layout>
       <SEO title={post.frontmatter.title} image={seoImage}/>
