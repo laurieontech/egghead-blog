@@ -1,0 +1,16 @@
+{
+  "name": "egghead-blog",
+  "version": "1.0.0",
+  "description": "A Gatsby powered blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.27.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
