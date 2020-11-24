@@ -8,6 +8,13 @@ module.exports = {
                 name: `posts`
             }
         },
-        `gatsby-plugin-mdx`
+        `gatsby-plugin-mdx`,
+        {
+            resolve: `gatsby-plugin-theme-ui`,
+            options: {
+                prismPreset: `prism-okaidia`,
+                preset: `@theme-ui/preset-funk`
+            }
+        }
     ]
 }
