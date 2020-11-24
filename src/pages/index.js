@@ -1,12 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import {graphql, Link} from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 
 const HomePage = ({data}) => {
     const posts = data.allMdx.nodes
     return (
     <Layout>
+        <StaticImage src="../images/sunset.jpg" alt="Man cheering in front of a sunset." layout="fluid"/>
         {posts.map((post) => {
             return (
                 <Link to={`posts/${post.slug}`} key={post.slug}>

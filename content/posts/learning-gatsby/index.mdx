@@ -1,5 +1,6 @@
 ---
 title: Learning about Gatsby
+image: ./gatsby-banner.png
 ---
 
 This is a post about learning Gatsby.
