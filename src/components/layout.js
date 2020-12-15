@@ -4,14 +4,24 @@ import { Helmet } from "react-helmet"
 import {Link} from "gatsby"
 
 const bodyStyles = {
-    m: `2rem`,
+    mx: `2rem`,
     padding: `1rem`,
+}
+
+const headerStyles = {
+    paddingLeft: `10px`
 }
 
 const mainStyles = {
     maxWidth: `container`,
     padding: `1rem`,
     mx: `auto`,
+    textAlign: `center`
+}
+
+const footerStyles=  {
+    textAlign: `center`,
+    background: `lightgrey`
 }
 
 const Layout = ({children}) => (
@@ -19,13 +29,13 @@ const Layout = ({children}) => (
         <Helmet         
         title={`My site`}
         htmlAttributes={{lang: `en`}}/>
-        <header>
+        <header sx={headerStyles}>
             <h1>            
                 <Link to="/">Home</Link>
             </h1>
         </header>
         <main sx={mainStyles}>{children}</main>
-        <footer><p>A fun footer</p></footer>
+        <footer><p sx={footerStyles}>A fun footer</p></footer>
     </div>
 )
 
