@@ -11,9 +11,9 @@ const BlogPostPage = ({data}) => {
   const seoImage = imageData.images.fallback.src
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} image={seoImage}/>
+      <SEO title={post.frontmatter.title} image={seoImage} imageAlt={post.frontmatter.imageAlt}/>
       <article>
-        <GatsbyImage image={imageData} layout="FLUID" role="presentation"/>
+        <GatsbyImage image={imageData} alt={post.frontmatter.imageAlt}/>
         <h2>{post.frontmatter.title}</h2>
         <MDXRenderer>{post.body}</MDXRenderer>
       </article>
@@ -32,6 +32,7 @@ export const query = graphql`
             gatsbyImageData(layout: CONSTRAINED)
           }
         }
+        imageAlt
       }
     }
   }

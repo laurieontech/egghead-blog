@@ -2,7 +2,7 @@ import React from 'react'
 import {Helmet} from "react-helmet"
 import {useStaticQuery, graphql} from 'gatsby'
 import PropTypes from 'prop-types'
-export const SEO = ({title, image, meta}) => {
+export const SEO = ({title, image, imageAlt, meta}) => {
     const {site} = useStaticQuery(
         graphql`
         query {
@@ -43,7 +43,7 @@ export const SEO = ({title, image, meta}) => {
               },
               {
                 name: `og:image:alt`,
-                content: title,
+                content: imageAlt || title,
               },
             {
                 name: `twitter:image`,
@@ -51,7 +51,7 @@ export const SEO = ({title, image, meta}) => {
               },
               {
                 name: `twitter:image:alt`,
-                content: title,
+                content: imageAlt || title,
               },
               {
                 name: `twitter:card`,
