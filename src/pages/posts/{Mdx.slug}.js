@@ -3,16 +3,17 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 
 const BlogPostPage = ({ data }) => {
   const post = data.mdx
   const imageData = getImage(post.frontmatter.image)
-  const seoImage = imageData.images.fallback.src
+  const seoImage = getSrc(post.frontmatter.image)
   return (
     <Layout>
       <SEO
         title={post.frontmatter.title}
+        description={post.frontmatter.description}
         image={seoImage}
         imageAlt={post.frontmatter.imageAlt}
       />

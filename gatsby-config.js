@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Egghead Blog`,
+    description: `My personal blog`,
+    twitter: `myhandle`,
     siteUrl: `https://example.com`,
   },
   plugins: [
@@ -23,5 +25,5 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-  ],
+  ]
 };
