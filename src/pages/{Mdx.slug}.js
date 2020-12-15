@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 
 const BlogPostPage = ({ data }) => {

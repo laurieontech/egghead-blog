@@ -16,7 +16,7 @@ const HomePage = ({ data }) => {
       />
       {posts.map((post) => {
         return (
-          <Link to={`posts/${post.slug}`} key={post.slug}>
+          <Link to={post.slug} key={post.slug}>
             <h2>{post.frontmatter.title}</h2>
           </Link>
         )
