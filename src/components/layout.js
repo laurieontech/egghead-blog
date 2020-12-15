@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import { Helmet } from "react-helmet"
 import {Link} from "gatsby"
 
 const bodyStyles = {
@@ -26,9 +25,6 @@ const footerStyles=  {
 
 const Layout = ({children}) => (
     <div sx={bodyStyles}>
-        <Helmet         
-        title={`My site`}
-        htmlAttributes={{lang: `en`}}/>
         <header sx={headerStyles}>
             <h1>            
                 <Link to="/">Home</Link>
